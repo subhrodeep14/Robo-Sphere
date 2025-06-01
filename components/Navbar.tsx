@@ -1,119 +1,51 @@
-import { useState } from "react";
+"use client";
+import { useState,useEffect } from "react";
 import Link from "next/link";
 import { FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  
+    const[showMobileMenu,setShowMobileMenu] = useState(false)
+
+  useEffect(()=>{
+    if(showMobileMenu){
+      document.body.style.overflow='hidden'
+    }else{
+       document.body.style.overflow='auto'
+    }
+    return ()=>{
+       document.body.style.overflow='hidden'
+    }
+  },[showMobileMenu])
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-gray-900 bg-opacity-90 backdrop-blur-sm z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/">
-          <a className="text-white text-2xl font-extrabold font-orbitron tracking-wide">
-            🤖 RoboBuild
-          </a>
-        </Link>
-
-        {/* Desktop Nav Links */}
-        <ul className="hidden md:flex space-x-8 text-gray-300 font-semibold">
-          <li>
-            <Link href="/">
-              <a className="hover:text-blue-500 transition">Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/products">
-              <a className="hover:text-blue-500 transition">Products</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/build">
-              <a className="hover:text-blue-500 transition">Build Your Robot</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <a className="hover:text-blue-500 transition">About</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/contact">
-              <a className="hover:text-blue-500 transition">Contact</a>
-            </Link>
-          </li>
+     <div className='absolute top-0 left-0 w-full z-10 '>
+      <div className='contanier mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent'>
+        <img src={'/robo-logo2.jpg'} className="w-40 h-20 bg-transparnet" alt="" />
+        <ul className='hidden md:flex gap-7 text-[#3BB3B1] font-semibold text-lg'>
+          <a href="#Header" className='cursor-pointer hover:text-gray-400'>Home</a>
+          <a href="#About" className='cursor-pointer hover:text-gray-400'>About</a>
+          <a href="#Projects" className='cursor-pointer hover:text-gray-400'>Project</a>
+          <a href="#Test" className='cursor-pointer hover:text-gray-400'>Testimonials</a>
         </ul>
-
-        {/* Cart & Hamburger */}
-        <div className="flex items-center space-x-4">
-          {/* Cart Icon */}
-          <button
-            aria-label="Cart"
-            className="relative text-gray-300 hover:text-blue-500 transition"
-          >
-            <FiShoppingCart size={24} />
-            {/* Cart badge */}
-            <span className="absolute -top-2 -right-2 bg-blue-500 text-white rounded-full text-xs px-1.5">
-              3
-            </span>
-          </button>
-
-          {/* Hamburger Menu Button for Mobile */}
-          <button
-            aria-label="Toggle Menu"
-            className="md:hidden text-gray-300 hover:text-blue-500 transition"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
-          </button>
+        <button className='hidden md:block hover:bg-zinc-700 hover:text-[#3BB3B1] bg-[#3BB3B1] rounded-full px-8 py-2'>Sign Up</button>
+        <img onClick={()=>setShowMobileMenu(true)}  className=' md:hidden w-7 ' alt="" />
         </div>
+        {/*-------mobile-menu-------*/}
+        <div className={` md:hidden ${showMobileMenu ?'fixed w-full' :'h-0 w-0'}  right-0 top-0 bottom-0 overflow-hidden bg-white transition-all`}>
+          <div className='flex justify-end p-6 cursor-pointer'>
+            <img onClick={()=>setShowMobileMenu(false)}  className='w-6' alt="" />
+          </div>
+          <ul className='flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium'>
+            <a onClick={()=>setShowMobileMenu(false)} href="#Header" className='px-4 py-2 rounded-full inline-block'>Home</a>
+            <a onClick={()=>setShowMobileMenu(false)} href="#About" className='px-4 py-2 rounded-full inline-block'>About</a>
+            <a onClick={()=>setShowMobileMenu(false)} href="#Project" className='px-4 py-2 rounded-full inline-block'>Project</a>
+            <a onClick={()=>setShowMobileMenu(false)} href="#Testimonials" className='px-4 py-2 rounded-full inline-block'>Testimonials</a>
+          </ul>
+        
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-gray-800 bg-opacity-95 backdrop-blur-sm px-6 py-4 space-y-4 font-semibold">
-          <Link href="/">
-            <a
-              onClick={() => setMenuOpen(false)}
-              className="block text-white hover:text-blue-500 transition"
-            >
-              Home
-            </a>
-          </Link>
-          <Link href="/products">
-            <a
-              onClick={() => setMenuOpen(false)}
-              className="block text-white hover:text-blue-500 transition"
-            >
-              Products
-            </a>
-          </Link>
-          <Link href="/build">
-            <a
-              onClick={() => setMenuOpen(false)}
-              className="block text-white hover:text-blue-500 transition"
-            >
-              Build Your Robot
-            </a>
-          </Link>
-          <Link href="/about">
-            <a
-              onClick={() => setMenuOpen(false)}
-              className="block text-white hover:text-blue-500 transition"
-            >
-              About
-            </a>
-          </Link>
-          <Link href="/contact">
-            <a
-              onClick={() => setMenuOpen(false)}
-              className="block text-white hover:text-blue-500 transition"
-            >
-              Contact
-            </a>
-          </Link>
-        </div>
-      )}
-    </nav>
+    </div>
+   
   );
 }
