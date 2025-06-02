@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
      <div className='absolute top-0 left-0 w-full z-10 '>
       <div className='contanier mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32 bg-transparent'>
-        <img src={'/logo.png'} className="w-40 h-20 bg-transparnet" alt="" />
+        <img src={'/logo2.png'} className="w-40 h-20 bg-transparnet" alt="" />
         <ul className='hidden md:flex gap-7 text-[#3BB3B1] font-semibold text-2xl'>
           <a href="#Header" className='cursor-pointer hover:text-[#ED4073]'>Home</a>
           <a href="#About" className='cursor-pointer hover:text-[#ED4073]'>About</a>
