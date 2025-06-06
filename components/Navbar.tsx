@@ -5,9 +5,11 @@ import { FiShoppingCart, FiMenu, FiX } from "react-icons/fi";
 
 import { MdClose } from "react-icons/md";
 import { assets } from "@/assets/assets";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Navbar() {
   
+  const session= useSession();
     const[showMobileMenu,setShowMobileMenu] = useState(false)
 
   useEffect(()=>{
@@ -31,7 +33,10 @@ export default function Navbar() {
           <a href="#Projects" className='cursor-pointer hover:text-[#ED4073]'>Project</a>
           <a href="#Test" className='cursor-pointer hover:text-[#ED4073]'>Testimonials</a>
         </ul>
-        <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2'>Sign Up</button>
+        {session.data?.user &&
+        <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2' onClick={()=>signOut()}>Sign Out</button>}
+        {!session.data?.user &&
+        <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2' onClick={()=>signIn()}>Sign Up</button>}
         <button
             aria-label="Toggle Menu"
             className="md:hidden text-gray-300 hover:text-blue-500 transition"
