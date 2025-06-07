@@ -36,7 +36,7 @@ export default function Navbar() {
         {session.data?.user &&
         <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2' onClick={()=>signOut()}>Sign Out</button>}
         {!session.data?.user &&
-        <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2' onClick={()=>signIn()}>Sign Up</button>}
+        <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2' onClick={()=>signIn("google")}>Sign Up</button>}
         <button
             aria-label="Toggle Menu"
             className="md:hidden text-gray-300 hover:text-blue-500 transition"
