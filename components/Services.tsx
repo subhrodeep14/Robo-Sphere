@@ -54,7 +54,7 @@ const Services: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-pink-800 to-rose-700 dark:from-white dark:via-pink-200 dark:to-rose-200 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-blue-600 dark:from-white dark:via-blue-200 dark:to-blue-100 bg-clip-text text-transparent mb-6">
             Our Services
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -72,12 +72,12 @@ const Services: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="group bg-gradient-to-br from-gray-50 to-pink-50 dark:from-gray-800 dark:to-pink-900/20 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-500 transition-all duration-300 hover:shadow-xl"
+              className="group bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-xl"
             >
               {/* Icon */}
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                className="inline-flex p-4 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl mb-6 group-hover:shadow-lg transition-shadow"
+                className="inline-flex p-4 bg-gradient-to-r from-blue-500 to-blue-500 rounded-2xl mb-6 group-hover:shadow-lg transition-shadow"
               >
                 <service.icon className="h-8 w-8 text-white" />
               </motion.div>
@@ -101,7 +101,7 @@ const Services: React.FC = () => {
                     viewport={{ once: true }}
                     className="flex items-center text-sm text-gray-700 dark:text-gray-300"
                   >
-                    <div className="w-2 h-2 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full mr-3" />
+                    <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-blue-400 rounded-full mr-3" />
                     {feature}
                   </motion.li>
                 ))}
@@ -111,10 +111,10 @@ const Services: React.FC = () => {
                <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="mt-6 w-full bg-white dark:bg-gray-800 text-pink-600 dark:text-pink-400 border-2 border-pink-200 dark:border-pink-600 py-3 rounded-xl font-semibold hover:bg-pink-50 dark:hover:bg-gray-700 transition-colors"
+                className="mt-6 w-full bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-200 dark:border-blue-600 py-3 rounded-xl font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors"
               >
                 Learn More
-              </motion.button> */
+              </motion.button> 
             </motion.div>
           ))}
         </div>

@@ -65,10 +65,10 @@ const Footer: React.FC = () => {
             >
               {/* Logo */}
               <div className="flex items-center space-x-2">
-                <div className="p-2 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg">
+                <div className="p-2 bg-gradient-to-r from-blue-500 to-blue-500 rounded-lg">
                   <Bot className="h-6 w-6 text-white" />
                 </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
+                <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-blue-400 bg-clip-text text-transparent">
                   Robo Sphere
                 </span>
               </div>
@@ -81,15 +81,15 @@ const Footer: React.FC = () => {
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-pink-400" />
+                  <Mail className="h-5 w-5 text-blue-400" />
                   <span className="text-gray-300">hello@robosphere.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-pink-400" />
+                  <Phone className="h-5 w-5 text-blue-400" />
                   <span className="text-gray-300">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-pink-400" />
+                  <MapPin className="h-5 w-5 text-blue-400" />
                   <span className="text-gray-300">123 Innovation Drive, Tech City</span>
                 </div>
               </div>
@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
                     href={social.href}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="p-3 bg-gray-800 hover:bg-gradient-to-r hover:from-pink-600 hover:to-rose-600 rounded-lg transition-all group"
+                    className="p-3 bg-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-600 rounded-lg transition-all group"
                     aria-label={social.label}
                   >
                     <social.icon className="h-5 w-5 text-gray-400 group-hover:text-white" />
@@ -148,7 +148,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-gray-400 text-sm">
-                © 2025 Robo Sphere. All rights reserved.
+                © blue Robo Sphere. All rights reserved.
               </p>
               <div className="flex space-x-6 text-sm">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -168,7 +168,7 @@ const Footer: React.FC = () => {
               onClick={scrollToTop}
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="p-3 bg-gradient-to-r from-pink-600 to-rose-600 rounded-lg shadow-lg hover:shadow-xl transition-all group"
+              className="p-3 bg-gradient-to-r from-blue-600 to-blue-600 rounded-lg shadow-lg hover:shadow-xl transition-all group"
               aria-label="Back to top"
             >
               <ArrowUp className="h-5 w-5 text-white group-hover:translate-y-[-2px] transition-transform" />

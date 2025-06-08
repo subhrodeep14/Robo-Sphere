@@ -72,7 +72,7 @@ const Testimonials: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-pink-800 to-rose-700 dark:from-white dark:via-pink-200 dark:to-rose-200 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-blue-700 dark:from-white dark:via-blue-200 dark:to-blue-200 bg-clip-text text-transparent mb-6">
             Client Success Stories
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -90,7 +90,7 @@ const Testimonials: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="bg-gradient-to-br from-gray-50 to-pink-50 dark:from-gray-800 dark:to-pink-900/20 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-500 transition-all duration-300 hover:shadow-xl"
+              className="bg-gradient-to-br from-gray-50 to-pink-50 dark:from-gray-800 dark:to-blue-900/20 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-xl"
             >
               {/* Quote Icon */}
               <motion.div
@@ -98,7 +98,7 @@ const Testimonials: React.FC = () => {
                 whileInView={{ scale: 1 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
                 viewport={{ once: true }}
-                className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-6"
+                className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6"
               >
                 <Quote className="h-6 w-6 text-white" />
               </motion.div>
@@ -125,7 +125,7 @@ const Testimonials: React.FC = () => {
 
               {/* Metrics Badge */}
               <div className="mb-6">
-                <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-pink-100 to-rose-100 dark:from-pink-900/50 dark:to-rose-900/50 text-pink-700 dark:text-pink-300 rounded-full text-sm font-medium">
+                <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-100 to-blue-100 dark:from-blue-900/50 dark:to-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
                   {testimonial.metrics}
                 </span>
               </div>
@@ -136,7 +136,7 @@ const Testimonials: React.FC = () => {
                   whileHover={{ scale: 1.1 }}
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-pink-200 dark:border-pink-600"
+                  className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-200 dark:border-blue-600"
                 />
                 <div>
                   <h4 className="font-bold text-gray-900 dark:text-white">
@@ -145,7 +145,7 @@ const Testimonials: React.FC = () => {
                   <p className="text-sm text-gray-600 dark:text-gray-400">
                     {testimonial.position}
                   </p>
-                  <p className="text-sm text-pink-600 dark:text-pink-400 font-medium">
+                  <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
                     {testimonial.company}
                   </p>
                 </div>
@@ -165,7 +165,7 @@ const Testimonials: React.FC = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
+            className="bg-gradient-to-r from-blue-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
           >
             Join Our Success Stories
           </motion.button>

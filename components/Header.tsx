@@ -5,17 +5,17 @@ import { motion } from 'framer-motion';
 import { Moon, Sun, Menu, X, Bot } from 'lucide-react';
 import { useDarkMode } from '../hook/useDarkMode';
 import { signIn, signOut, useSession } from 'next-auth/react';
+import { useActiveSection } from './ActiveSectionContext';
 
-interface HeaderProps {
-  activeSection: string;
-  setActiveSection: (section: string) => void;
-}
+
  
 
-const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
+const Header: React.FC = () => {
   const { isDark, toggleDarkMode } = useDarkMode();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const { activeSection, setActiveSection } = useActiveSection();
   const session = useSession();
+  
 
   const navItems = [
     { id: 'home', label: 'Home' },
@@ -27,6 +27,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
+    console.log(`Scrolling to section: ${sectionId}`, element);
+    console.log("hi");
+    
+    
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(sectionId);
@@ -38,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
     <motion.header 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/50 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -48,10 +52,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
             className="flex items-center space-x-2 cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
-            <div className="p-2 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg">
+            <div className="p-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg">
               <Bot className="h-6 w-6 text-white" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
               Robo Sphere
             </span>
           </motion.div>
@@ -64,10 +68,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.id)}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-2 rounded-md text-md font-medium transition-colors ${
                   activeSection === item.id
-                    ? 'text-pink-600 dark:text-pink-400 bg-pink-50 dark:bg-pink-900/50'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400'
+                    ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/50'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400'
                 }`}
               >
                 {item.label}
@@ -86,9 +90,9 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </motion.button>
             {session.data?.user &&
-                    <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2' onClick={()=>signOut()}>Sign Out</button>}
+                    <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-blue-200 bg-blue-500 rounded-full px-8 py-2' onClick={()=>signOut()}>Sign Out</button>}
                     {!session.data?.user &&
-                    <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2' onClick={()=>signIn("google")}>Sign Up</button>}
+                    <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-blue-200 bg-blue-500 rounded-full px-8 py-2 text-lg transition-all' onClick={()=>signIn("google")}>Sign Up</button>}
 
             {/* Mobile Menu Button */}
             <motion.button
@@ -112,7 +116,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, setActiveSection }) => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
               >
                 {item.label}
               </button>

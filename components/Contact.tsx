@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 via-pink-50 to-rose-50 dark:from-gray-900 dark:via-pink-900/20 dark:to-rose-900/20">
+    <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 via-blue-50 to-blue-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-blue-900/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -82,7 +82,7 @@ const Contact: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-pink-800 to-rose-700 dark:from-white dark:via-pink-200 dark:to-rose-200 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-blue-700 dark:from-white dark:via-blue-200 dark:to-blue-300 bg-clip-text text-transparent mb-6">
             Get In Touch
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -118,16 +118,16 @@ const Contact: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ x: 10 }}
-                  className="flex items-start space-x-4 p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-500 transition-all"
+                  className="flex items-start space-x-4 p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all"
                 >
-                  <div className="p-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl">
+                  <div className="p-3 bg-gradient-to-r from-blue-500 to-blue-500 rounded-xl">
                     <info.icon className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900 dark:text-white mb-1">
                       {info.title}
                     </h4>
-                    <p className="text-pink-600 dark:text-pink-400 font-medium mb-1">
+                    <p className="text-blue-600 dark:text-blue-400 font-medium mb-1">
                       {info.content}
                     </p>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
                       placeholder="John Doe"
                     />
                   </div>
@@ -174,7 +174,7 @@ const Contact: React.FC = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
                       placeholder="john@company.com"
                     />
                   </div>
@@ -190,7 +190,7 @@ const Contact: React.FC = () => {
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
                       placeholder="Your Company"
                     />
                   </div>
@@ -203,7 +203,7 @@ const Contact: React.FC = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
+                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
@@ -217,7 +217,7 @@ const Contact: React.FC = () => {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
                   >
                     <option value="">Select a service</option>
                     {services.map((service, index) => (
@@ -236,7 +236,7 @@ const Contact: React.FC = () => {
                     onChange={handleInputChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-500 dark:focus:ring-pink-500 focus:border-transparent text-gray-900 dark:text-white transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white transition-colors resize-none"
                     placeholder="Tell us about your project requirements, timeline, and how we can help..."
                   />
                 </div>
@@ -245,7 +245,7 @@ const Contact: React.FC = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-600 text-white py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
                 >
                   <Send className="h-5 w-5" />
                   <span>Send Message</span>
