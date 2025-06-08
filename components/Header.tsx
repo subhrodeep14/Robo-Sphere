@@ -7,13 +7,17 @@ import { useDarkMode } from '../hook/useDarkMode';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import { useActiveSection } from './ActiveSectionContext';
 
+interface ActiveSection {
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+}
 
  
 
-const Header: React.FC = () => {
+const Header: React.FC<ActiveSection> = ({activeSection,setActiveSection}) => {
   const { isDark, toggleDarkMode } = useDarkMode();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-  const { activeSection, setActiveSection } = useActiveSection();
+
   const session = useSession();
   
 
