@@ -108,13 +108,13 @@ const Services: React.FC = () => {
               </ul>
 
               {/* Learn More Button */}
-               <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="mt-6 w-full bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 border-2 border-blue-200 dark:border-blue-600 py-3 rounded-xl font-semibold hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors"
               >
                 Learn More
-              </motion.button> 
+              </motion.button> */}
             </motion.div>
           ))}
         </div>

@@ -152,14 +152,14 @@ const Projects: React.FC = () => {
                 </div>
 
                 {/* Learn More Button */}
-                <motion.button
+              {/*  <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="group/btn w-full bg-gradient-to-r from-blue-600 to-blue-600 text-white py-3 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:shadow-lg transition-all"
                 >
                   <span>View Case Study</span>
                   <ArrowRight className="h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
-                </motion.button>
+                </motion.button>*/}
               </div>
             </motion.div>
           ))}

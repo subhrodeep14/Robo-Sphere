@@ -128,21 +128,21 @@ const Hero: React.FC = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group bg-gradient-to-r from-blue-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
-                onClick={()=>router.push('/Projects')}
+                onClick={()=>router.push('/projects')}
               >
                 <span>Explore More</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>}
               
               
-              <motion.button
+              {/*<motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group bg-white dark:bg-gray-800 text-gray-900 dark:text-white border-2 border-gray-200 dark:border-gray-700 px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 hover:border-blue-300 dark:hover:border-blue-500 transition-colors"
               >
                 <Play className="h-5 w-5" />
                 <span>Watch Demo</span>
-              </motion.button>
+              </motion.button>*/}
             </motion.div>
           </motion.div>
 
