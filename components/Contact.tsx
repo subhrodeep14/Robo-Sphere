@@ -45,19 +45,19 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'hello@robosphere.com',
+      content: 'robospherellp26@gmail.com',
       description: 'Get in touch for project inquiries'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      content: '+1 (555) 123-4567',
+      content: '+91 8272944092',
       description: '24/7 technical support available'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Innovation Drive, Tech City, TC 12345',
+      content: 'Kolkata, West Bengal, India',
       description: 'State-of-the-art robotics lab & showroom'
     }
   ];
