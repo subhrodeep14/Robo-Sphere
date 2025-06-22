@@ -33,7 +33,7 @@ export default function Navbar() {
           <a href="#Projects" className='cursor-pointer hover:text-[#ED4073]'>Project</a>
           <a href="#Test" className='cursor-pointer hover:text-[#ED4073]'>Testimonials</a>
         </ul>
-        {session.data?.user &&
+      {/* {session.data?.user &&
         <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2' onClick={()=>signOut()}>Sign Out</button>}
         {!session.data?.user &&
         <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-[#3BB3B1] bg-[#ED4073] rounded-full px-8 py-2' onClick={()=>signIn("google")}>Sign Up</button>}
@@ -44,6 +44,7 @@ export default function Navbar() {
           >
             {showMobileMenu ? <FiX size={28} /> : <FiMenu size={28} />}
           </button>
+          */} 
         
         </div>
         {/*-------mobile-menu-------*/}

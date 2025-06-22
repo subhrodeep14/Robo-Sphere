@@ -44,9 +44,9 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Github, href: '#', label: 'GitHub' }
+   // { icon: Twitter, href: '#', label: 'Twitter' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/therobosphere/', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/TheRoboSphere', label: 'GitHub' }
   ];
 
   return (
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Mail className="h-5 w-5 text-blue-400" />
-                  <span className="text-gray-300">hello@robosphere.com</span>
+                  <span className="text-gray-300">robospherellp26@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="h-5 w-5 text-blue-400" />
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-5 w-5 text-blue-400" />
-                  <span className="text-gray-300">123 Innovation Drive, Tech City</span>
+                  <span className="text-gray-300">Kolkata, West Bengal, India</span>
                 </div>
               </div>
 

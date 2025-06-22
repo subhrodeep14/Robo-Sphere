@@ -111,7 +111,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-                {!session.data?.user &&
+              {/*  {!session.data?.user &&
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -120,8 +120,8 @@ const Hero: React.FC = () => {
               >
                 <span>Get Started</span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>}
-              {session.data?.user &&
+              </motion.button>}*/} 
+              {//session.data?.user &&
                         
                         
               <motion.button
