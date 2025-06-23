@@ -2,23 +2,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Play, Zap, Shield, Cpu } from 'lucide-react';
-import { signIn, signOut, useSession } from 'next-auth/react';
-import { Redirect } from 'next';
+import { signIn, useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
 const Hero: React.FC = () => {
-    const session = useSession();
-    const router= useRouter();
+  const session = useSession();
+  const router = useRouter();
   return (
     <section id="home" className="relative min-h-screen bg-gradient-to-br from-gray-50/10 via-blue-50 to-blue-50/90 dark:from-gray-900 dark:via-blue-900/20 dark:to-blue-900 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          animate={{ 
+          animate={{
             rotate: 360,
             scale: [1, 1.2, 1]
           }}
-          transition={{ 
+          transition={{
             duration: 20,
             repeat: Infinity,
             ease: "linear"
@@ -26,11 +25,11 @@ const Hero: React.FC = () => {
           className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-blue-500/50 rounded-full blur-3xl"
         />
         <motion.div
-          animate={{ 
+          animate={{
             rotate: -360,
             scale: [1.2, 1, 1.2]
           }}
-          transition={{ 
+          transition={{
             duration: 25,
             repeat: Infinity,
             ease: "linear"
@@ -111,30 +110,28 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              {/*  {!session.data?.user &&
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group bg-gradient-to-r from-blue-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
-                onClick={()=>signIn()}
-              >
-                <span>Get Started</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>}*/} 
-              {//session.data?.user &&
-                        
-                        
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="group bg-gradient-to-r from-blue-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
-                onClick={()=>router.push('/projects')}
-              >
-                <span>Explore More</span>
-                <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>}
-              
-              
+              {!session.data?.user &&
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group bg-gradient-to-r from-blue-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                  onClick={() => signIn()}
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </motion.button>}
+              {session.data?.user &&
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="group bg-gradient-to-r from-blue-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                  onClick={() => router.push('/projects')}
+                >
+                  <span>Explore More</span>
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </motion.button>}
+
+
               {/*<motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -156,11 +153,11 @@ const Hero: React.FC = () => {
             <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-blue-100 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/30 rounded-3xl overflow-hidden">
               {/* Animated Robot Illustration */}
               <motion.div
-                animate={{ 
+                animate={{
                   y: [0, -20, 0],
                   rotate: [0, 2, -2, 0]
                 }}
-                transition={{ 
+                transition={{
                   duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut"

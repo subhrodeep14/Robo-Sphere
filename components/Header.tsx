@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Moon, Sun, Menu, X, Bot } from 'lucide-react';
 import { useDarkMode } from '../hook/useDarkMode';
 import { signIn, signOut, useSession } from 'next-auth/react';
-import { useActiveSection } from './ActiveSectionContext';
+
 
 interface ActiveSection {
   activeSection: string;
@@ -94,9 +94,9 @@ const Header: React.FC<ActiveSection> = ({activeSection,setActiveSection}) => {
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </motion.button>
             {session.data?.user &&
-                    <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-blue-200 bg-blue-500 rounded-full px-8 py-2' onClick={()=>signOut()}>Sign Out</button>}
-                    {!session.data?.user &&
-                    <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-blue-200 bg-blue-500 rounded-full px-8 py-2 text-lg transition-all' onClick={()=>signIn("google")}>Sign Up</button>}
+              <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-blue-200 bg-blue-500 rounded-full px-8 py-2' onClick={() => signOut()}>Sign Out</button>}
+            {!session.data?.user &&
+              <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-blue-200 bg-blue-500 rounded-full px-8 py-2 text-lg transition-all' onClick={() => signIn("google")}>Sign Up</button>}
 
             {/* Mobile Menu Button */}
             <motion.button

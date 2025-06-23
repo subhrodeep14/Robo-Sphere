@@ -22,24 +22,31 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({
-          name: '',
-          email: '',
-          company: '',
-          phone: '',
-          service: '',
-          message: ''
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement | HTMLTextAreaElement | HTMLSelectElement>) {
+        e.preventDefault();
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify({
+                access_key: process.env.WEB3FORMS_API_KEY,
+                name: formData.name,
+                email: formData.email,  
+                company: formData.company,
+                phone: formData.phone,  
+                service: formData.service,
+                message: formData.message,  
+
+            }),
         });
-      }, 3000);
-    }, 1000);
-  };
+        const result = await response.json();
+        if (result.success) {
+            console.log(result);
+        }
+    }
 
   const contactInfo = [
     {

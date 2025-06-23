@@ -102,6 +102,7 @@ const Footer: React.FC = () => {
                     href={social.href}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
+                    target='_blank'
                     className="p-3 bg-gray-800 hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-600 rounded-lg transition-all group"
                     aria-label={social.label}
                   >
