@@ -56,12 +56,14 @@ const Header: React.FC<ActiveSection> = ({activeSection,setActiveSection}) => {
             className="flex items-center space-x-2 cursor-pointer"
             onClick={() => scrollToSection('home')}
           >
-            <div className="p-2 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg">
-              <Bot className="h-6 w-6 text-white" />
+            <div className="p-2 mt-2  rounded-lg">
+              {isDark ? 
+                <img src="finallogow.png" alt="Logo" className="h-20 w-60" />
+               : 
+                <img src="finallogob.png" alt="Logo" className="h-20 w-60" />
+              }
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
-              Robo Sphere
-            </span>
+           
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -119,7 +121,7 @@ const Header: React.FC<ActiveSection> = ({activeSection,setActiveSection}) => {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={()=> scrollToSection(item.id)}
                 className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
               >
                 {item.label}

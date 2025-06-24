@@ -5,15 +5,7 @@ import { Star, Quote } from 'lucide-react';
 
 const Testimonials: React.FC = () => {
   const testimonials = [
-    {
-      name: 'Sarah Chen',
-      position: 'CTO at TechFlow Industries',
-      company: 'TechFlow Industries',
-      image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=300',
-      content: 'Robo Sphere transformed our manufacturing process completely. The 40% efficiency increase and dramatic error reduction exceeded all expectations. Their team\'s expertise in AI integration is unmatched.',
-      rating: 5,
-      metrics: '40% efficiency increase'
-    },
+   
     {
       name: 'Marcus Rodriguez',
       position: 'Operations Director',
@@ -32,24 +24,8 @@ const Testimonials: React.FC = () => {
       rating: 5,
       metrics: '30% staff efficiency boost'
     },
-    {
-      name: 'James Thompson',
-      position: 'Farm Operations Manager',
-      company: 'GreenField Agriculture',
-      image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=300',
-      content: 'The precision farming robots have transformed our agricultural operations. 35% yield increase, significant water savings, and reduced environmental impact. Exceptional technology.',
-      rating: 5,
-      metrics: '35% yield increase'
-    },
-    {
-      name: 'Lisa Park',
-      position: 'Security Director',
-      company: 'SecureGuard Corp',
-      image: 'https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=300',
-      content: 'The autonomous security patrol system provides comprehensive coverage we never had before. 99% threat detection accuracy and continuous monitoring have elevated our security standards.',
-      rating: 5,
-      metrics: '99% threat detection'
-    },
+   
+    
     {
       name: 'David Kim',
       position: 'Environmental Engineer',
@@ -154,7 +130,8 @@ const Testimonials: React.FC = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action 
+        {}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -169,7 +146,7 @@ const Testimonials: React.FC = () => {
           >
             Join Our Success Stories
           </motion.button>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

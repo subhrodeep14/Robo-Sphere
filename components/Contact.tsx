@@ -52,7 +52,7 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      content: 'robospherellp26@gmail.com',
+      content: 'director@therobosphere.co.in',
       description: 'Get in touch for project inquiries'
     },
     {
@@ -211,7 +211,7 @@ const Contact: React.FC = () => {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white transition-colors"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 8272944092"
                     />
                   </div>
                 </div>

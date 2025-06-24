@@ -7,14 +7,6 @@ import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 const Projects: React.FC = () => {
   const projects = [
     {
-      title: 'AutoFlow Manufacturing',
-      category: 'Industrial Automation',
-      description: 'Fully automated assembly line with AI-powered quality control and predictive maintenance systems.',
-      image: 'https://images.pexels.com/photos/3862132/pexels-photo-3862132.jpeg?auto=compress&cs=tinysrgb&w=600',
-      metrics: ['40% efficiency increase', '60% error reduction', '24/7 operation'],
-      technologies: ['AI Vision', 'Robotic Arms', 'IoT Sensors', 'Machine Learning']
-    },
-    {
       title: 'LogiBot Warehouse',
       category: 'Logistics & Supply Chain',
       description: 'Autonomous mobile robots for warehouse operations, inventory management, and last-mile delivery.',
@@ -26,25 +18,9 @@ const Projects: React.FC = () => {
       title: 'MediCare Assistant',
       category: 'Healthcare Robotics',
       description: 'Service robots for hospitals providing patient care assistance, medication delivery, and sanitization.',
-      image: 'https://images.pexels.com/photos/8847988/pexels-photo-8847988.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://t4.ftcdn.net/jpg/06/41/34/69/360_F_641346910_GDVNrmydFLDQaHnrQGbPcrHdTy7efErR.jpg',
       metrics: ['30% staff efficiency', '99.9% sanitization', '24/7 availability'],
       technologies: ['Voice Recognition', 'Biometric Sensors', 'UV Sanitization', 'Patient Monitoring']
-    },
-    {
-      title: 'AgroBot Precision',
-      category: 'Agricultural Technology',
-      description: 'Precision farming robots for planting, monitoring, and harvesting with environmental optimization.',
-      image: 'https://images.pexels.com/photos/2518861/pexels-photo-2518861.jpeg?auto=compress&cs=tinysrgb&w=600',
-      metrics: ['35% yield increase', '60% water savings', '80% pesticide reduction'],
-      technologies: ['GPS Navigation', 'Soil Analysis', 'Weather Integration', 'Crop Monitoring']
-    },
-    {
-      title: 'SecureGuard Patrol',
-      category: 'Security & Surveillance',
-      description: 'Autonomous security robots with advanced surveillance capabilities and threat detection systems.',
-      image: 'https://images.pexels.com/photos/8566526/pexels-photo-8566526.jpeg?auto=compress&cs=tinysrgb&w=600',
-      metrics: ['100% area coverage', '99% threat detection', '24/7 monitoring'],
-      technologies: ['Computer Vision', 'Thermal Imaging', 'Motion Detection', 'Alert Systems']
     },
     {
       title: 'CleanTech Solutions',
