@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-blue-500/50 rounded-full blur-3xl"
+          className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-pink-500/20 to-blue-500/50 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-blue-600/20 rounded-full blur-3xl"
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-r from-pink-500/20 to-blue-600/20 rounded-full blur-3xl"
         />
       </div>
 
@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-100 to-blue-100 dark:from-blue-900/50 dark:to-blue-900/50 px-4 py-2 rounded-full border border-blue-200 dark:border-blue-700"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-200 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 px-4 py-2 rounded-full border border-blue-200 dark:border-blue-700"
             >
               <Zap className="h-4 w-4 text-blue-600 dark:text-blue-400" />
               <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Next-Gen Robotics Solutions</span>
@@ -114,7 +114,7 @@ const Hero: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group bg-gradient-to-r from-blue-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                  className="group bg-gradient-to-r from-pink-700 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
                   onClick={() => signIn()}
                 >
                   <span>Get Started</span>
@@ -124,7 +124,7 @@ const Hero: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group bg-gradient-to-r from-blue-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                  className="group bg-gradient-to-r from-pink-700 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
                   onClick={() => router.push('/projects')}
                 >
                   <span>Explore More</span>

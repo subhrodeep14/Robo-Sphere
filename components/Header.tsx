@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Moon, Sun, Menu, X, Bot } from 'lucide-react';
+import { Moon, Sun, Menu, X } from 'lucide-react';
 import { useDarkMode } from '../hook/useDarkMode';
 import { signIn, signOut, useSession } from 'next-auth/react';
 
@@ -58,9 +58,9 @@ const Header: React.FC<ActiveSection> = ({activeSection,setActiveSection}) => {
           >
             <div className="p-2 mt-2  rounded-lg">
               {isDark ? 
-                <img src="finallogow.png" alt="Logo" className="h-20 w-60" />
+                <img src="finallogow.png" alt="Logo" className="h-20 w-50" />
                : 
-                <img src="finallogob.png" alt="Logo" className="h-20 w-60" />
+                <img src="finallogob.png" alt="Logo" className="h-20 w-50" />
               }
             </div>
            

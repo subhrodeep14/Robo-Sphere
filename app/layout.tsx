@@ -17,6 +17,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Robo Sphere",
   description: "Next Gen Robotics Platform",
+  icons: {
+    icon: "/minilogob.png",
+  },
+
 };
 
 export default function RootLayout({
