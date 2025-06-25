@@ -17,6 +17,7 @@ interface ActiveSection {
 const Header: React.FC<ActiveSection> = ({activeSection,setActiveSection}) => {
   const { isDark, toggleDarkMode } = useDarkMode();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  
 
   const session = useSession();
   
@@ -96,9 +97,9 @@ const Header: React.FC<ActiveSection> = ({activeSection,setActiveSection}) => {
               {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </motion.button>
             {session.data?.user &&
-              <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-blue-200 bg-blue-500 rounded-full px-8 py-2' onClick={() => signOut()}>Sign Out</button>}
+              <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-blue-200 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full px-8 py-2' onClick={() => signOut()}>Sign Out</button>}
             {!session.data?.user &&
-              <button className='hidden md:block text-white hover:text-zinc-700 hover:bg-blue-200 bg-blue-500 rounded-full px-8 py-2 text-lg transition-all' onClick={() => signIn("google")}>Sign Up</button>}
+              <button className='hidden md:block text-white hover:text-zinc-700 hover:from-pink-300 hover:to-blue-400 bg-gradient-to-r from-pink-500 to-blue-500 rounded-full px-8 py-2 text-lg transition-all' onClick={() => signIn("google")}>Sign Up</button>}
 
             {/* Mobile Menu Button */}
             <motion.button

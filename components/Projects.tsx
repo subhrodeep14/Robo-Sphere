@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <span className="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {project.category}
                   </span>
                 </div>
@@ -120,7 +120,7 @@ const Projects: React.FC = () => {
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-pink-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 text-xs rounded-lg"
+                      className="px-2 py-1 bg-pink-100 dark:bg-pink-900 text-blue-700 dark:text-blue-300 text-xs rounded-lg"
                     >
                       {tech}
                     </span>

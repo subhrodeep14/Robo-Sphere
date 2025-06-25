@@ -66,7 +66,7 @@ const Testimonials: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -5 }}
-              className="bg-gradient-to-br from-gray-50 to-pink-50 dark:from-gray-800 dark:to-blue-900/20 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-xl"
+              className="bg-gradient-to-br from-gray-50 to-pink-50 dark:from-gray-800 dark:to-blue-900/20 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-500 transition-all duration-300 hover:shadow-xl"
             >
               {/* Quote Icon */}
               <motion.div
@@ -74,7 +74,7 @@ const Testimonials: React.FC = () => {
                 whileInView={{ scale: 1 }}
                 transition={{ delay: index * 0.1 + 0.3 }}
                 viewport={{ once: true }}
-                className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6"
+                className="w-12 h-12 bg-gradient-to-r from-pink-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6"
               >
                 <Quote className="h-6 w-6 text-white" />
               </motion.div>
@@ -101,7 +101,7 @@ const Testimonials: React.FC = () => {
 
               {/* Metrics Badge */}
               <div className="mb-6">
-                <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-100 to-blue-100 dark:from-blue-900/50 dark:to-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
+                <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-pink-100 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium">
                   {testimonial.metrics}
                 </span>
               </div>
@@ -112,7 +112,7 @@ const Testimonials: React.FC = () => {
                   whileHover={{ scale: 1.1 }}
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-blue-200 dark:border-blue-600"
+                  className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-pink-200 dark:border-pink-600"
                 />
                 <div>
                   <h4 className="font-bold text-gray-900 dark:text-white">

@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-200 to-blue-100 dark:from-pink-900/50 dark:to-blue-900/50 px-4 py-2 rounded-full border border-blue-200 dark:border-blue-700"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-pink-200 to-blue-200 dark:from-pink-700/50 dark:to-blue-900/50 px-4 py-2 rounded-full border border-blue-200 dark:border-blue-700"
             >
               <Zap className="h-4 w-4 text-blue-600 dark:text-blue-400" />
               <span className="text-sm font-medium text-blue-700 dark:text-blue-300">Next-Gen Robotics Solutions</span>
@@ -164,7 +164,7 @@ const Hero: React.FC = () => {
                 }}
                 className="absolute inset-0 flex items-center justify-center"
               >
-                <div className="w-64 h-64 bg-gradient-to-br from-blue-500 to-blue-500 rounded-2xl shadow-2xl flex items-center justify-center">
+                <div className="w-64 h-64 bg-gradient-to-br from-pink-400  to-blue-600 rounded-2xl shadow-2xl flex items-center justify-center">
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
@@ -188,7 +188,7 @@ const Hero: React.FC = () => {
                     repeat: Infinity,
                     delay: i * 0.2
                   }}
-                  className={`absolute w-3 h-3 bg-gradient-to-r from-blue-400 to-blue-400 rounded-full`}
+                  className={`absolute w-3 h-3 bg-gradient-to-r from-pink-400 to-blue-400 rounded-full`}
                   style={{
                     top: `${20 + i * 10}%`,
                     left: `${10 + i * 15}%`

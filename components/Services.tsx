@@ -72,12 +72,12 @@ const Services: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="group bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 hover:shadow-xl"
+              className="group bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 p-8 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-pink-300 dark:hover:border-pink-300 transition-all duration-300 hover:shadow-xl"
             >
               {/* Icon */}
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
-                className="inline-flex p-4 bg-gradient-to-r from-blue-500 to-blue-500 rounded-2xl mb-6 group-hover:shadow-lg transition-shadow"
+                className="inline-flex p-4 bg-gradient-to-r from-pink-500 to-blue-500 rounded-2xl mb-6 group-hover:shadow-lg transition-shadow"
               >
                 <service.icon className="h-8 w-8 text-white" />
               </motion.div>

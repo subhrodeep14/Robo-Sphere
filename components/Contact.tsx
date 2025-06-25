@@ -127,7 +127,7 @@ const Contact: React.FC = () => {
                   whileHover={{ x: 10 }}
                   className="flex items-start space-x-4 p-6 bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all"
                 >
-                  <div className="p-3 bg-gradient-to-r from-blue-500 to-blue-500 rounded-xl">
+                  <div className="p-3 bg-gradient-to-r from-pink-500 to-blue-500 rounded-xl">
                     <info.icon className="h-6 w-6 text-white" />
                   </div>
                   <div>
@@ -252,7 +252,8 @@ const Contact: React.FC = () => {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-600 text-white py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
+                  onAbort={() => setIsSubmitted(true)}
+                  className="w-full bg-gradient-to-r from-pink-600 to-blue-600 text-white py-4 rounded-xl font-semibold flex items-center justify-center space-x-2 shadow-lg hover:shadow-xl transition-all"
                 >
                   <Send className="h-5 w-5" />
                   <span>Send Message</span>
